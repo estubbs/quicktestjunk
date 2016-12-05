@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -33,6 +34,7 @@ namespace WebApplication1.Controllers
         }
         public ActionResult NotFound()
         {
+            Log.Warning("Not found ran");
             return HttpNotFound();
         }
         public ActionResult BadRequest()
